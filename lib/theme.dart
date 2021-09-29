@@ -8,6 +8,25 @@ ThemeData theme() {
     fontFamily: "Muli",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
+    inputDecorationTheme: inputDecorationTheme(),
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  return InputDecorationTheme(
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    labelStyle: TextStyle(color: kTextColor),
+    contentPadding: EdgeInsets.fromLTRB(42, 15, 5, 15),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: kTextColor),
+      borderRadius: BorderRadius.circular(30),
+      gapPadding: 8,
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: kTextColor),
+      borderRadius: BorderRadius.circular(30),
+      gapPadding: 8,
+    ),
   );
 }
 

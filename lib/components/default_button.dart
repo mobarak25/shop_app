@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
 
-class DefultButton extends StatelessWidget {
+class DefaultButton extends StatelessWidget {
   final String? text;
   final VoidCallback press;
-  const DefultButton({
+  const DefaultButton({
     Key? key,
     this.text,
     required this.press,
