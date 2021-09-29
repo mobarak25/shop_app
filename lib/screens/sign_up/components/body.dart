@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/components/custom_suffix_icon.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/components/social_card.dart';
+import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -18,6 +19,7 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: SizeConfig.screenHeight * 0.03),
               Text(
                 "Register Account",
                 style: TextStyle(
@@ -30,12 +32,16 @@ class Body extends StatelessWidget {
                 "Complete your details or continue\n with social media",
                 textAlign: TextAlign.center,
               ),
+              SizedBox(height: SizeConfig.screenHeight * 0.05),
               SignUpForm(),
               SizedBox(height: getProportionateScreenHeight(60)),
               DefaultButton(
                 text: "Continue",
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                },
               ),
+              SizedBox(height: SizeConfig.screenHeight * 0.06),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -57,6 +63,7 @@ class Body extends StatelessWidget {
                 "By continuing your confirm that you agree\n with our term and Condition",
                 textAlign: TextAlign.center,
               ),
+              SizedBox(height: SizeConfig.screenHeight * 0.03),
             ],
           ),
         ),
