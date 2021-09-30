@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/custom_suffix_icon.dart';
 import 'package:shop_app/components/default_button.dart';
+import 'package:shop_app/screens/otp/otp_screen.dart';
 import 'package:shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -41,7 +42,9 @@ class Body extends StatelessWidget {
               ),
               DefaultButton(
                 text: "Continue",
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, OtpScreen.routeName);
+                },
               ),
               SizedBox(
                 height: getProportionateScreenHeight(40),
