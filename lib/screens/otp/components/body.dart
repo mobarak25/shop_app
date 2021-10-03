@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/size_config.dart';
 
@@ -30,6 +29,11 @@ class Body extends StatelessWidget {
             Text("We sent your code to +88017******48"),
             buildTime(),
             OtpForm(),
+            DefaultButton(
+              text: "Continuerr",
+              press: () {},
+            ),
+            Text("Resend OTP Code"),
           ],
         ),
       ),
@@ -171,7 +175,7 @@ class _OtpFormState extends State<OtpForm> {
               focusNode: pin4FocusNode,
               keyboardType: TextInputType.number,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               obscureText: true,
               decoration: InputDecoration(
                 contentPadding:
