@@ -15,6 +15,7 @@ class Body extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
         child: Column(
           children: [
+            Spacer(),
             SizedBox(
               height: getProportionateScreenHeight(20),
             ),
@@ -28,12 +29,16 @@ class Body extends StatelessWidget {
             ),
             Text("We sent your code to +88017******48"),
             buildTime(),
+            Spacer(),
             OtpForm(),
+            Spacer(),
             DefaultButton(
-              text: "Continuerr",
+              text: "Continue",
               press: () {},
             ),
+            Spacer(),
             Text("Resend OTP Code"),
+            Spacer(),
           ],
         ),
       ),
