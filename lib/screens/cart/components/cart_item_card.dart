@@ -36,34 +36,36 @@ class CartItemCard extends StatelessWidget {
         SizedBox(
           width: getProportionateScreenWidth(20),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black,
-              ),
-              maxLines: 2,
-            ),
-            SizedBox(height: getProportionateScreenWidth(8)),
-            Text.rich(
-              TextSpan(
-                text: "\$$price",
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
                 style: TextStyle(
-                  color: kPrimaryColor,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Colors.black,
                 ),
-                children: [
-                  TextSpan(
-                    text: " X$numOfIten",
-                    style: TextStyle(color: kTextColor),
-                  ),
-                ],
+                maxLines: 2,
               ),
-            ),
-          ],
+              SizedBox(height: getProportionateScreenWidth(8)),
+              Text.rich(
+                TextSpan(
+                  text: "\$$price",
+                  style: TextStyle(
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: " X$numOfIten",
+                      style: TextStyle(color: kTextColor),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         )
       ],
     );

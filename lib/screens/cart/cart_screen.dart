@@ -19,10 +19,6 @@ class CartScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      leading: Icon(
-        Icons.arrow_back_ios,
-        size: 18,
-      ),
       title: Column(
         children: [
           Text(
