@@ -14,15 +14,15 @@ class RoundedIconBtn extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        width: 48,
-        height: 48,
+        width: 45,
+        height: 45,
         decoration: BoxDecoration(
           color: Colors.white,
           shape: BoxShape.circle,
         ),
         child: Icon(
           icon,
-          size: 30,
+          size: 26,
         ),
       ),
     );
