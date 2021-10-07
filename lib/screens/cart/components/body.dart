@@ -30,14 +30,45 @@ class Body extends StatelessWidget {
         "price": 64.99,
         "numOfItems": 5,
       },
+      {
+        "title": "Wireless Controller for PS4™",
+        "image": "assets/images/Image Popular Product 1.png",
+        "price": 99.99,
+        "numOfItems": 2,
+      },
+      {
+        "title":
+            "Nike Sport White - Man Pant Nike Sport White - Man Pant Nike Sport White - Man Pant",
+        "image": "assets/images/Image Popular Product 2.png",
+        "price": 100,
+        "numOfItems": 3,
+      },
+      {
+        "title": "Logitech Head",
+        "image": "assets/images/Image Popular Product 3.png",
+        "price": 64.99,
+        "numOfItems": 5,
+      },
     ];
-    return Column(
-      children: [
-        //here we need Expanded otherwise listView.bulder will showing blank page
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(20)),
+    return Padding(
+      padding:
+          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+      child: Column(
+        children: [
+          SizedBox(height: getProportionateScreenWidth(20)),
+          Container(
+            padding: EdgeInsets.only(bottom: getProportionateScreenWidth(20)),
+            width: double.infinity,
+            child: Text(
+              "Wano Store",
+              style: TextStyle(
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          //here we need Expanded otherwise listView.bulder will showing blank page
+          Expanded(
             child: ListView.builder(
               itemCount: demoCarts.length,
               itemBuilder: (context, index) => Dismissible(
@@ -74,8 +105,8 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

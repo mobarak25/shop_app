@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/screens/profile/profile_screen.dart';
 import 'package:shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -34,7 +35,9 @@ class Body extends StatelessWidget {
             Spacer(),
             DefaultButton(
               text: "Continue",
-              press: () {},
+              press: () {
+                Navigator.pushNamed(context, ProfileScreen.routeName);
+              },
             ),
             Spacer(),
             Text("Resend OTP Code"),
