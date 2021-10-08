@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 
 import 'components/body.dart';
-import 'components/check_our_cart.dart';
 
 class CartScreen extends StatelessWidget {
   static String routeName = "/cart";
@@ -14,9 +13,23 @@ class CartScreen extends StatelessWidget {
       child: Scaffold(
         appBar: buildAppBar(),
         body: Body(),
-
-        // Botom Navigation bar
-        bottomNavigationBar: CheckOurCard(),
+        bottomNavigationBar: Container(
+          height: 174,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: +Color(0xFFDADADA).withOpacity(0.7),
+                blurRadius: 20,
+                offset: Offset(0, -10),
+              ),
+            ],
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
+          ),
+        ),
       ),
     );
   }
